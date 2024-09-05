@@ -19,6 +19,7 @@ public class Usuario {
     private String id;
     private String nome;
     private String email;
+    private String usuarioId;
     private String documento;
     private LocalDateTime dataCadastro;
     private LocalDateTime dataAtualizacao;
