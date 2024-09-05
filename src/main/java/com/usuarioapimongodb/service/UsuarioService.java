@@ -21,7 +21,7 @@ import static org.springframework.util.Assert.*;
 public class UsuarioService {
     private final UsuarioRepository usuarioRepository;
     private final UsuarioConverter usuarioConverter;
-    private final UsuarioMapper usuarioMapper;
+    public UsuarioMapper usuarioMapper;
     private final EnderecoService enderecoService;
 
     public UsuarioResponseDTO gravarUsuarios(UsuarioRequestDTO usuarioRequestDTO) {

@@ -6,10 +6,8 @@ import com.usuarioapimongodb.infraestrutura.entity.Usuario;
 import com.usuarioapimongodb.infraestrutura.entity.response.UsuarioResponseDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.springframework.stereotype.Component;
 
 @Mapper(componentModel = "spring")
-@Component
 public interface UsuarioMapper {
 
     @Mapping(target = "id", source = "usuario.id")

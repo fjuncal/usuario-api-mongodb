@@ -12,14 +12,13 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collation = "usuario")
+@Document(collection = "usuario")
 public class Usuario {
 
     @Id
     private String id;
     private String nome;
     private String email;
-    private String usuarioId;
     private String documento;
     private LocalDateTime dataCadastro;
     private LocalDateTime dataAtualizacao;
