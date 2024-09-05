@@ -4,6 +4,8 @@ package com.usuarioapimongodb.service;
 import com.usuarioapimongodb.converter.UsuarioConverter;
 import com.usuarioapimongodb.converter.UsuarioMapper;
 import com.usuarioapimongodb.infraestrutura.entity.Usuario;
+import com.usuarioapimongodb.infraestrutura.entity.request.UsuarioRequestDTO;
+import com.usuarioapimongodb.infraestrutura.entity.response.UsuarioResponseDTO;
 import com.usuarioapimongodb.infraestrutura.exceptions.BusinessException;
 import com.usuarioapimongodb.infraestrutura.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
