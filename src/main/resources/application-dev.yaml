@@ -4,3 +4,8 @@ spring:
       host: localhost
       port: 27017
       database: usuario
+    redis:
+      host: localhost
+      port: 6379
+  cache:
+    type: redis

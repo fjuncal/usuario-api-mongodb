@@ -1,5 +1,7 @@
 package com.usuarioapimongodb.infraestrutura.entity.response;
 
+import java.io.Serializable;
+
 public record EnderecoResponseDTO(String rua,
 
                                   Long numero,
@@ -10,5 +12,5 @@ public record EnderecoResponseDTO(String rua,
 
                                   String cidade,
 
-                                  String cep) {
+                                  String cep) implements Serializable {
 }

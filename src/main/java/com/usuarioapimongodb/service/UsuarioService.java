@@ -10,6 +10,7 @@ import com.usuarioapimongodb.infraestrutura.entity.response.UsuarioResponseDTO;
 import com.usuarioapimongodb.infraestrutura.exceptions.BusinessException;
 import com.usuarioapimongodb.infraestrutura.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.Assert;
@@ -36,8 +37,10 @@ public class UsuarioService {
         }
     }
 
+    @Cacheable(value = "usuario", key = "#email")
     public UsuarioResponseDTO buscarDadosUsuario(String email) {
         try {
+            Thread.sleep(8000);
             Usuario usuarioByEmail = usuarioRepository.findByEmail(email);
             notNull(usuarioByEmail, "Usuário não encontrado");
             Endereco enderecoByUsuarioId = enderecoService.findByUsuarioId(usuarioByEmail.getId());
